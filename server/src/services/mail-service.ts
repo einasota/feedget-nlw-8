@@ -8,3 +8,12 @@ export const mailservice = nodemailer.createTransport({
       pass: "e25532d63c1008"
     }
 });
+
+export interface SendMailData {
+    subject: string;
+    body: string;
+}
+
+export interface MailService {
+    sendMail: (data: SendMailData) => void;
+}
